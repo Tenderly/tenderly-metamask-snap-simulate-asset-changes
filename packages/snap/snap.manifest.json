@@ -1,18 +1,18 @@
 {
   "version": "0.1.0",
-  "description": "An example Snap written in TypeScript.",
-  "proposedName": "TypeScript Example Snap",
+  "description": "Tenderly MetaMask Snap showcasing usage of the transaction asset changes.",
+  "proposedName": "Tenderly Simulate Asset Changes Snap",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MetaMask/template-snap-monorepo.git"
+    "url": "https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes.git"
   },
   "source": {
-    "shasum": "usoZPr0F4J12BaVbuDQRCCIW2cj/N5gZD7ccOJfDZV8=",
+    "shasum": "ofP5HZGWp8337nJJ6Fy8wRn2eqMx0iZr6Tm5UdTDx1o=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",
         "iconPath": "images/icon.svg",
-        "packageName": "snap",
+        "packageName": "@tenderly/simulate-asset-changes-snap",
         "registry": "https://registry.npmjs.org/"
       }
     }
@@ -22,6 +22,15 @@
     "endowment:rpc": {
       "dapps": true,
       "snaps": false
+    },
+    "endowment:transaction-insight": {
+      "allowTransactionOrigin": true
+    },
+    "endowment:network-access": {},
+    "snap_manageState": {},
+    "endowment:ethereum-provider": {
+      "dapps": true,
+      "snaps": true
     }
   },
   "manifestVersion": "0.1"

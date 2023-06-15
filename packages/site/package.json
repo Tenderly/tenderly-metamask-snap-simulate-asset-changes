@@ -1,7 +1,8 @@
 {
-  "name": "site",
+  "name": "@tenderly/simulate-asset-changes-ui",
   "version": "0.1.0",
   "private": true,
+  "description": "Tenderly Simulate Asset Changes UI.",
   "license": "(MIT-0 OR Apache-2.0)",
   "scripts": {
     "build": "cross-env GATSBY_TELEMETRY_DISABLED=1 gatsby build",

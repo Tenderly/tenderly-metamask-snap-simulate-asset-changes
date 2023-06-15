@@ -134,6 +134,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   * {
+    box-sizing: border-box;
     transition: background-color .1s linear;
   }
 

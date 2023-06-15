@@ -1,5 +1,14 @@
-import { OnRpcRequestHandler } from '@metamask/snaps-types';
-import { panel, text } from '@metamask/snaps-ui';
+import {
+  OnRpcRequestHandler,
+  OnTransactionHandler,
+} from '@metamask/snaps-types';
+import { isObject, hasProperty } from '@metamask/utils';
+import { NodeType } from '@metamask/snaps-ui';
+import {
+  handleUpdateTenderlyCredentials,
+  handleSendTenderlyTransaction,
+  simulate,
+} from './tenderly';
 
 /**
  * Handle incoming JSON-RPC requests, sent through `wallet_invokeSnap`.
@@ -13,21 +22,34 @@ import { panel, text } from '@metamask/snaps-ui';
  */
 export const onRpcRequest: OnRpcRequestHandler = ({ origin, request }) => {
   switch (request.method) {
-    case 'hello':
-      return snap.request({
-        method: 'snap_dialog',
-        params: {
-          type: 'confirmation',
-          content: panel([
-            text(`Hello, **${origin}**!`),
-            text('This custom confirmation is just for display purposes.'),
-            text(
-              'But you can edit the snap source code to make it do something, if you want to!',
-            ),
-          ]),
-        },
-      });
+    case 'update_tenderly_credentials':
+      return handleUpdateTenderlyCredentials(origin);
+    case 'send_tenderly_transaction':
+      return handleSendTenderlyTransaction(origin);
     default:
-      throw new Error('Method not found.');
+      throw new Error(`Method ${request.method} not supported.`);
   }
+};
+
+export const onTransaction: OnTransactionHandler = async ({
+  transaction,
+  transactionOrigin,
+}) => {
+  if (!isObject(transaction) || !hasProperty(transaction, 'to')) {
+    return {
+      content: {
+        value: 'Unknown transaction type',
+        type: NodeType.Text,
+      },
+    };
+  }
+
+  const simulationResponse = await simulate(transaction, transactionOrigin);
+
+  return {
+    content: {
+      children: simulationResponse.children,
+      type: NodeType.Panel,
+    },
+  };
 };
