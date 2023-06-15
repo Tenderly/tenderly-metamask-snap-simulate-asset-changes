@@ -2,7 +2,6 @@
 
 <img width="1680" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/9ab7d12b-bc93-4d64-a688-41a850ce6b78">
 
-
 # Introduction
 
 The Tenderly MetaMask snap project is an innovative collaboration that merges the robust simulation capabilities of Tenderly with the extensive features of MetaMask Snaps. Our main objective is to augment the transparency and visibility of dApp contract calls, giving users a comprehensive overview before they confirm a transaction.
@@ -21,7 +20,8 @@ By providing these features, our project aims to enhance the user experience, re
 
 More info about asset changes can be found on our official docs:
 
-- https://docs.tenderly.co/simulations-and-forks/asset-changes
+- **Simulation API** - https://docs.tenderly.co/simulations-and-forks/simulation-api
+- **Asset Changes** - https://docs.tenderly.co/simulations-and-forks/asset-changes
 
 # Setup
 
@@ -37,7 +37,9 @@ Welcome to the setup guide for the Tenderly MetaMask snap. In this tutorial, we 
 
 - **Open a Tenderly Account**: To use the Tenderly MetaMask snap, you'll need a Tenderly account. If you don't have one already, visit the [Tenderly website](https://dashboard.tenderly.co/register) and create a new account.
 
-- **Create an Access Key**: Once you've logged into your Tenderly account, you will need to create an `access-key`. This is a unique identifier that allows the Tenderly MetaMask snap to interact with your Tenderly account.
+- **Create an Access Key**: Once you've logged into your Tenderly account, you will need to create an `access-key`. This is a unique identifier that allows the Tenderly MetaMask snap to interact with your Tenderly account. You can generate it on the following link https://dashboard.tenderly.co/account/authorization.
+
+<img width="577" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/0abb39b3-dd2b-4af6-98c4-73c00f4f70f0">
 
 ## 3. App Setup
 
@@ -54,6 +56,8 @@ Welcome to the setup guide for the Tenderly MetaMask snap. In this tutorial, we 
 That's it! You've successfully set up the Tenderly MetaMask snap. If you encounter any issues during the setup process, don't hesitate to reach out to our support team at support@tenderly.co. We're here to help! 💜
 
 # Examples
+
+In this section, we provide examples of how the Tenderly MetaMask snap works with both successful and failed transactions. These examples include ERC20 and NFT transfers.
 
 ## Successful Transactions ✅
 
