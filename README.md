@@ -4,7 +4,7 @@
 
 # Introduction
 
-The Tenderly MetaMask snap project is an innovative collaboration that merges the robust simulation capabilities of Tenderly with the extensive features of MetaMask Snaps. Our main objective is to augment the transparency and visibility of dApp contract calls, giving users a comprehensive overview before they confirm a transaction.
+The Tenderly Simulate Asset Changes Snap is an innovative collaboration that merges the robust simulation capabilities of Tenderly with the extensive features of MetaMask Snaps. Our main objective is to augment the transparency and visibility of dApp contract calls, giving users a comprehensive overview before they confirm a transaction.
 
 Upon setting up a transaction, the user is presented with the following data points to assist in making an informed decision:
 
@@ -25,7 +25,7 @@ More info about asset changes can be found on our official docs:
 
 # Setup
 
-Welcome to the setup guide for the Tenderly MetaMask snap. In this tutorial, we will guide you through each step to ensure that you are set up correctly. Follow the instructions below to get started.
+Welcome to the setup guide for the Tenderly Simulate Asset Changes Snap. In this tutorial, we will guide you through each step to ensure that you are set up correctly. Follow the instructions below to get started.
 
 ## 1. MetaMask Snap Development
 
@@ -47,6 +47,24 @@ Welcome to the setup guide for the Tenderly MetaMask snap. In this tutorial, we 
 
 - **Start the App**: After you've cloned the repository, navigate to the root directory of the project in your terminal. Once you're in the correct location, run the command `yarn start`. This will start the app, and it should be accessible on http://localhost:8000.
 
+To clone the repository, use the following command:
+
+```
+git clone https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes.git
+```
+
+Then navigate to the root directory of the project:
+
+```
+cd tenderly-metamask-snap-simulate-asset-changes
+```
+
+Start the app with:
+
+```
+yarn start
+```
+
 ## 4. Connection & Credentials
 
 - **Install the Snap**: With the app running, you can now install the Tenderly MetaMask snap. To do this, click on **Reconnect** button within the app.
@@ -63,10 +81,14 @@ In this section, we provide examples of how the Tenderly MetaMask snap works wit
 
 ### ERC20 Transfer - send 1 USDC to demo.eth
 
+The images below show a successful ERC20 token transfer of 1 USDC to `demo.eth`. The first image shows the asset changes, while the second image provides a detailed breakdown of the transaction.
+
 <img width="419" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/e8bee0ce-4a37-4ae8-a9a9-c3d074d56245">
 <img width="413" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/b88995b2-5c6a-4484-b976-0c609ce49c44">
 
 ### NFT Transfer - send 1 NFT to other address
+
+The images below show a successful ERC721 (NFT) token transfer of 1 Crypto Bull to other address. The first image shows the asset changes, while the second image provides a detailed breakdown of the transaction.
 
 <img width="420" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/1fc50ec1-0f34-430a-b1ef-5d4a9eeedade">
 <img width="420" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/534a49b3-d015-44b5-b0c5-279a75b5af64">
@@ -74,6 +96,8 @@ In this section, we provide examples of how the Tenderly MetaMask snap works wit
 ## Failed Transaction ❌
 
 ### ERC20 Transfer - send 1,000,000 USDC to demo.eth
+
+The image below shows a failed ERC20 token transfer of 1,000,000 USDC to `demo.eth`.
 
 <img width="425" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/5be3bbf0-7ac9-4d6d-8927-7aa5d9c045a4">
 
