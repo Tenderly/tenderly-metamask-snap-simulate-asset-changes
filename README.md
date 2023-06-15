@@ -8,13 +8,15 @@ The Tenderly Simulate Asset Changes Snap is an innovative collaboration that mer
 
 Upon setting up a transaction, the user is presented with the following data points to assist in making an informed decision:
 
-- **Asset Changes with Dollar Value**: To assist in understanding the financial implications of the transaction, users are shown any changes in asset quantities along with their corresponding dollar value. The most commonly used token standards are supported: **ERC20** and **ERC721**.
-- **Native-asset Balance Changes**: This feature enables users to track the modifications in their native-asset balance during the execution of the contract.
-- **Output Value**: The output value provides the result of the contract call, displaying what the contract is set to return.
-- **Storage Changes**: Users can see any alterations made to the contract's storage during execution, allowing them to understand how their contract interacts with the blockchain's state.
-- **Event Logs**: Event logs show all the events that were emitted during the contract's execution, offering valuable insights into the contract's internal operations.
-- **Call Traces**: Call traces provide a step-by-step breakdown of the contract execution, helping users to debug and understand the behavior of their contract.
-- **Link to Simulation in Tenderly Dashboard**: For a more in-depth analysis, users can follow a link to view the full contract simulation on the Tenderly Dashboard.
+| Feature | Description |
+|---------|-------------|
+| **Link to Simulation in Tenderly Dashboard** | For a more in-depth analysis, users can follow a link to view the full contract simulation on the Tenderly Dashboard. |
+| **Asset Changes with Dollar Value** | To assist in understanding the financial implications of the transaction, users are shown any changes in asset quantities along with their corresponding dollar value. The most commonly used token standards are supported: **ERC20** and **ERC721**. |
+| **Native-asset Balance Changes** | This feature enables users to track the modifications in their native-asset balance during the execution of the contract. |
+| **Output Value** | The output value provides the result of the contract call, displaying what the contract is set to return. |
+| **Storage Changes** | Users can see any alterations made to the contract's storage during execution, allowing them to understand how their contract interacts with the blockchain's state. |
+| **Event Logs** | Event logs show all the events that were emitted during the contract's execution, offering valuable insights into the contract's internal operations. |
+| **Call Traces** | Call traces provide a step-by-step breakdown of the contract execution, helping users to debug and understand the behavior of their contract. |
 
 By providing these features, our project aims to enhance the user experience, reduce transaction risks, and increase the understanding of blockchain transactions.
 
