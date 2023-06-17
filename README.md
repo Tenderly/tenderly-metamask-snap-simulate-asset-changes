@@ -1,6 +1,28 @@
-# Tenderly Simulate Asset Changes Snap
+<div>
+  <img width="1680" alt="Tenderly Simulate Asset Changes Snap" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/9ab7d12b-bc93-4d64-a688-41a850ce6b78">
+  <h1 align="center">Tenderly Simulate Asset Changes Snap</h1>
+</div>
 
-<img width="1680" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/9ab7d12b-bc93-4d64-a688-41a850ce6b78">
+<p align="center">
+  Tenderly Simulate Asset Changes Snap presents opportunities for wallets, DeFi projects, and DEXs to make transactions more human-readable for their users.
+</p>
+
+<p align="center">
+  <a href="https://twitter.com/TenderlyApp">
+    <img src="https://img.shields.io/twitter/follow/TenderlyApp?style=flat&label=%40TenderlyApp&logo=twitter&color=0bf&logoColor=fff" alt="Twitter" />
+  </a>
+  <a href="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/Tenderly/tenderly-metamask-snap-simulate-asset-changes?label=license&logo=github&color=f80&logoColor=fff" alt="License" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="#introduction"><strong>Introduction</strong></a> ·
+  <a href="#setup"><strong>Setup</strong></a> ·
+  <a href="#examples"><strong>Examples</strong></a> ·
+  <a href="#contributing"><strong>Contributing</strong></a>
+</p>
+<br/>
 
 # Introduction
 
@@ -103,10 +125,19 @@ The image below shows a failed ERC20 token transfer of 1,000,000 USDC to `demo.e
 
 <img width="425" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/5be3bbf0-7ac9-4d6d-8927-7aa5d9c045a4">
 
-# Contributors
+# Contributing
+
+We love our contributors! Here's how you can contribute:
+
+- [Open an issue](https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/issues) if you believe you've encountered a bug.
+- Make a [pull request](https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/pull) to add new features/make quality-of-life improvements/fix bugs.
 
 <a href="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Tenderly/tenderly-metamask-snap-simulate-asset-changes&max=100&columns=20" alt="tenderly-contributors" />
+  <img src="https://contrib.rocks/image?repo=Tenderly/tenderly-metamask-snap-simulate-asset-changes" alt="tenderly-contributors" />
 </a>
+
+# Author
+
+- Vanja Paunović ([@dzimiks](https://twitter.com/dzimiks))
 
 The repo is made using [@metamask/template-snap-monorepo](https://github.com/MetaMask/template-snap-monorepo).
