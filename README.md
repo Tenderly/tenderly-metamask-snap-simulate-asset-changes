@@ -107,15 +107,15 @@ In this section, we provide examples of how the Tenderly MetaMask snap works wit
 
 The images below show a successful ERC20 token transfer of 1 USDC to `demo.eth`. The first image shows the asset changes, while the second image provides a detailed breakdown of the transaction.
 
-<img width="230" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/e8bee0ce-4a37-4ae8-a9a9-c3d074d56245">
-<img width="230" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/b88995b2-5c6a-4484-b976-0c609ce49c44">
+<img width="350" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/e8bee0ce-4a37-4ae8-a9a9-c3d074d56245">
+<img width="350" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/b88995b2-5c6a-4484-b976-0c609ce49c44">
 
 ### NFT Transfer - send 1 NFT to other address
 
 The images below show a successful ERC721 (NFT) token transfer of 1 Crypto Bull to other address. The first image shows the asset changes, while the second image provides a detailed breakdown of the transaction.
 
-<img width="230" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/1fc50ec1-0f34-430a-b1ef-5d4a9eeedade">
-<img width="230" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/534a49b3-d015-44b5-b0c5-279a75b5af64">
+<img width="350" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/1fc50ec1-0f34-430a-b1ef-5d4a9eeedade">
+<img width="350" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/534a49b3-d015-44b5-b0c5-279a75b5af64">
 
 ## Failed Transaction ❌
 
