@@ -53,23 +53,35 @@ Welcome to the setup guide for the Tenderly Simulate Asset Changes Snap. In this
 
 ## 1. MetaMask Snap Development
 
-- **Disable the Production Version of MetaMask**: If you have the production version of MetaMask installed, you'll need to disable it. Navigate to `chrome://extensions` in your browser. Locate MetaMask from the list of your installed extensions, and toggle it off. Alternatively, you can start a new profile in Chrome or Brave, which will allow you to use different extensions for different purposes.
+### Disable the Production Version of MetaMask
 
-- **Install MetaMask Flask Development Plugin**: The next step is to install the MetaMask Flask development plugin. This is a specific version of MetaMask designed for development purposes. You can install it from the [Chrome Web Store](https://chrome.google.com/webstore/detail/metamask-flask-developmen/ljfoeinjpaedjfecbmggjgodbgkmjkjk). Simply click the link and follow the instructions to add the plugin to your browser.
+If you have the production version of MetaMask installed, you'll need to disable it. Navigate to `chrome://extensions` in your browser. Locate MetaMask from the list of your installed extensions, and toggle it off. Alternatively, you can start a new profile in Chrome or Brave, which will allow you to use different extensions for different purposes.
+
+### Install MetaMask Flask Development Plugin
+
+The next step is to install the MetaMask Flask development plugin. This is a specific version of MetaMask designed for development purposes. You can install it from the [Chrome Web Store](https://chrome.google.com/webstore/detail/metamask-flask-developmen/ljfoeinjpaedjfecbmggjgodbgkmjkjk). Simply click the link and follow the instructions to add the plugin to your browser.
 
 ## 2. Tenderly Access
 
-- **Open a Tenderly Account**: To use the Tenderly MetaMask snap, you'll need a Tenderly account. If you don't have one already, visit the [Tenderly website](https://dashboard.tenderly.co/register) and create a new account.
+### Open a Tenderly Account
 
-- **Create an Access Key**: Once you've logged into your Tenderly account, you will need to create an `access-key`. This is a unique identifier that allows the Tenderly MetaMask snap to interact with your Tenderly account. You can generate it on the following link https://dashboard.tenderly.co/account/authorization.
+To use the Tenderly MetaMask snap, you'll need a Tenderly account. If you don't have one already, visit the [Tenderly website](https://dashboard.tenderly.co/register) and create a new account.
+
+### Create an Access Key
+
+Once you've logged into your Tenderly account, you will need to create an `access-key`. This is a unique identifier that allows the Tenderly MetaMask snap to interact with your Tenderly account. You can generate it on the following link https://dashboard.tenderly.co/account/authorization.
 
 <img width="577" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/0abb39b3-dd2b-4af6-98c4-73c00f4f70f0">
 
 ## 3. App Setup
 
-- **Clone the Repository**: Now, you'll need to get the code for the app onto your local machine. You can do this by cloning this repository. If you're not sure how to do this, you can find detailed instructions in the GitHub documentation.
+### Clone the Repository
 
-- **Start the App**: After you've cloned the repository, navigate to the root directory of the project in your terminal. Once you're in the correct location, run the command `yarn start`. This will start the app, and it should be accessible on http://localhost:8000.
+Now, you'll need to get the code for the app onto your local machine. You can do this by cloning this repository. If you're not sure how to do this, you can find detailed instructions in the GitHub documentation.
+
+### Start the App
+
+After you've cloned the repository, navigate to the root directory of the project in your terminal. Once you're in the correct location, run the command `yarn start`. This will start the app, and it should be accessible on http://localhost:8000.
 
 To clone the repository, use the following command:
 
@@ -91,9 +103,13 @@ yarn start
 
 ## 4. Connection & Credentials
 
-- **Install the Snap**: With the app running, you can now install the Tenderly MetaMask snap. To do this, click on **Reconnect** button within the app.
+### Install the Snap
 
-- **Add Tenderly Credentials**: Finally, you'll need to add your Tenderly credentials to the snap. Click on **Add access key** button within the app. You'll need to enter your credentials in the following format: `{user_id}@{project_id}@{access_key}`.
+With the app running, you can now install the Tenderly MetaMask snap. To do this, click on **Reconnect** button within the app.
+
+### Add Tenderly Credentials
+
+Finally, you'll need to add your Tenderly credentials to the snap. Click on **Add access key** button within the app. You'll need to enter your credentials in the following format: `{user_id}@{project_id}@{access_key}`.
 
 That's it! You've successfully set up the Tenderly MetaMask snap. If you encounter any issues during the setup process, don't hesitate to reach out to our support team at support@tenderly.co. We're here to help! 💜
 
@@ -107,15 +123,15 @@ In this section, we provide examples of how the Tenderly MetaMask snap works wit
 
 The images below show a successful ERC20 token transfer of 1 USDC to `demo.eth`. The first image shows the asset changes, while the second image provides a detailed breakdown of the transaction.
 
-<img width="350" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/e8bee0ce-4a37-4ae8-a9a9-c3d074d56245">
-<img width="350" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/b88995b2-5c6a-4484-b976-0c609ce49c44">
+<img width="360" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/e8bee0ce-4a37-4ae8-a9a9-c3d074d56245">
+<img width="360" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/b88995b2-5c6a-4484-b976-0c609ce49c44">
 
 ### NFT Transfer - send 1 NFT to other address
 
 The images below show a successful ERC721 (NFT) token transfer of 1 Crypto Bull to other address. The first image shows the asset changes, while the second image provides a detailed breakdown of the transaction.
 
-<img width="350" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/1fc50ec1-0f34-430a-b1ef-5d4a9eeedade">
-<img width="350" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/534a49b3-d015-44b5-b0c5-279a75b5af64">
+<img width="360" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/1fc50ec1-0f34-430a-b1ef-5d4a9eeedade">
+<img width="360" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/534a49b3-d015-44b5-b0c5-279a75b5af64">
 
 ## Failed Transaction ❌
 
@@ -139,5 +155,7 @@ We love our contributors! Here's how you can contribute:
 # Author
 
 - Vanja Paunović ([@dzimiks](https://twitter.com/dzimiks))
+
+<br/>
 
 The repo is made using [@metamask/template-snap-monorepo](https://github.com/MetaMask/template-snap-monorepo).
