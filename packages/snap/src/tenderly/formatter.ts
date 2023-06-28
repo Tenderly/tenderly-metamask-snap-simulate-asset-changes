@@ -298,6 +298,7 @@ export function formatSimulationUrl(
   credentials: TenderlyCredentials,
 ): Component[] {
   const simulationUrl = `https://dashboard.tenderly.co/${credentials.userId}/${credentials.projectId}/simulator/${data.simulation?.id}`;
+  const sharedSimulationUrl = `https://dashboard.tenderly.co/shared/simulation/${data.simulation?.id}`;
 
   return [
     heading('Tenderly Dashboard:'),
@@ -306,5 +307,7 @@ export function formatSimulationUrl(
       `**Status:** ${data.transaction?.status ? 'Success ✅' : 'Failed ❌'}`,
     ),
     text(`**${simulationUrl}**`),
+    text('Share simulation details with others! 🤗'),
+    text(`**${sharedSimulationUrl}**`),
   ];
 }

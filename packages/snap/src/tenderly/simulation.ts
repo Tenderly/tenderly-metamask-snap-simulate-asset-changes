@@ -25,7 +25,7 @@ export async function handleSendTenderlyTransaction(origin: string) {
  */
 export async function simulate(
   transaction: { [key: string]: Json },
-  transactionOrigin: any,
+  transactionOrigin: string,
 ): Promise<Panel> {
   const credentials = await fetchCredentials(transactionOrigin);
 
@@ -72,7 +72,24 @@ async function submitSimulation(
       },
     },
   );
-  return response.json();
+
+  const parsedResponse = await response.json();
+
+  // Make the simulation publicly accessible
+  if (parsedResponse?.simulation?.id) {
+    await fetch(
+      `https://api.tenderly.co/api/v1/account/${credentials.userId}/project/${credentials.projectId}/simulations/${parsedResponse.simulation.id}/share`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Access-Key': credentials.accessKey,
+        },
+      },
+    );
+  }
+
+  return parsedResponse;
 }
 
 /**
