@@ -43,7 +43,7 @@ Upon setting up a transaction, the user is presented with the following data poi
 
 By providing these features, our project aims to enhance the user experience, reduce transaction risks, and increase the understanding of blockchain transactions.
 
-## Public Sharing
+## Public Simulation Sharing
 
 ![image](https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/f45f3b74-bda7-4101-b7a3-7485d378d0ce)
 
