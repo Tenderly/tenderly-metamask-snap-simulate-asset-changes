@@ -59,6 +59,7 @@ More info about asset changes can be found on our official docs:
 
 - **Simulation API** - https://docs.tenderly.co/simulations-and-forks/simulation-api
 - **Asset Changes** - https://docs.tenderly.co/simulations-and-forks/asset-changes
+- **Public Sharing of Transactions, DevNets, Forks, and Simulations** - https://blog.tenderly.co/changelog/public-sharing-of-transactions-devnets-forks-and-simulations
 
 # Setup
 
