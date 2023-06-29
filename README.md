@@ -140,6 +140,7 @@ The images below show a successful ERC20 token transfer of 1 USDC to `demo.eth`.
 <img width="320" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/cb6f2a09-c6fc-4346-8f0c-12639c8d26f2">
 <img width="320" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/c358a9bc-0d76-45a1-b02c-919606a09282">
 <img width="320" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/792910da-5190-4cd7-a72e-7a0029c773a4">
+<br/>
 <img width="1396" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/476243ce-19b1-43f6-93d2-1b5608c852fd">
 
 ### NFT Transfer - send 1 NFT to other address
@@ -149,6 +150,7 @@ The images below show a successful ERC721 (NFT) token transfer of 1 Crypto Bull 
 <img width="320" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/819f6a63-bcad-4bb8-80e3-45d8400e964d">
 <img width="320" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/5684d0f6-a3ea-40b4-af1b-40d60ec1fe18">
 <img width="320" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/ce1a8a7a-a501-4bb5-92e8-d6d2ee56c8be">
+<br/>
 <img width="1392" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/218a3eb0-f5c2-4a5a-89e7-89331a18e04e">
 
 
@@ -159,6 +161,7 @@ The images below show a successful ERC721 (NFT) token transfer of 1 Crypto Bull 
 The image below shows a failed ERC20 token transfer of 1,000,000 USDC to `demo.eth`.
 
 <img width="425" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/70f176cb-ae1f-447d-96aa-1246a14a1d91">
+<br/>
 <img width="1388" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/a6dc0140-62a0-4295-b39e-b073e907b057">
 
 # Contributing
