@@ -33,6 +33,7 @@ Upon setting up a transaction, the user is presented with the following data poi
 | Feature | Description |
 |---------|-------------|
 | **Link to Simulation in Tenderly Dashboard** | For a more in-depth analysis, users can follow a link to view the full contract simulation on the Tenderly Dashboard. |
+| **Link to Publicly Shared Simulation in Tenderly Dashboard** | The shared resources are in read-only mode. The receiver of the URL does not need to have a Tenderly account to view the resources. |
 | **Asset Changes with Dollar Value** | To assist in understanding the financial implications of the transaction, users are shown any changes in asset quantities along with their corresponding dollar value. The most commonly used token standards are supported: **ERC20** and **ERC721**. |
 | **Native-asset Balance Changes** | This feature enables users to track the modifications in their native-asset balance during the execution of the contract. |
 | **Output Value** | The output value provides the result of the contract call, displaying what the contract is set to return. |
@@ -41,6 +42,18 @@ Upon setting up a transaction, the user is presented with the following data poi
 | **Call Traces** | Call traces provide a step-by-step breakdown of the contract execution, helping users to debug and understand the behavior of their contract. |
 
 By providing these features, our project aims to enhance the user experience, reduce transaction risks, and increase the understanding of blockchain transactions.
+
+## Public Sharing
+
+![image](https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/f45f3b74-bda7-4101-b7a3-7485d378d0ce)
+
+Now you can publicly share transactions, simulations, as well as entire runs on DevNets and Forks. When public sharing is enabled, a unique URL is generated that can be distributed to anyone.
+
+The shared resources are in read-only mode. The receiver of the URL does not need to have a Tenderly account to view the resources.
+
+Access to shared resources can be enabled and revoked at any time via the Dashboard or API.
+
+## Additional Info
 
 More info about asset changes can be found on our official docs:
 
