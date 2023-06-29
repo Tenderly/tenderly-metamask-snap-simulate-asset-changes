@@ -141,7 +141,7 @@ The images below show a successful ERC721 (NFT) token transfer of 1 Crypto Bull 
 
 The image below shows a failed ERC20 token transfer of 1,000,000 USDC to `demo.eth`.
 
-<img width="425" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/5be3bbf0-7ac9-4d6d-8927-7aa5d9c045a4">
+<img width="425" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/70f176cb-ae1f-447d-96aa-1246a14a1d91">
 
 # Contributing
 
