@@ -131,8 +131,9 @@ The images below show a successful ERC20 token transfer of 1 USDC to `demo.eth`.
 
 The images below show a successful ERC721 (NFT) token transfer of 1 Crypto Bull to other address. The first image shows the asset changes, while the second image provides a detailed breakdown of the transaction.
 
-<img width="360" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/1fc50ec1-0f34-430a-b1ef-5d4a9eeedade">
-<img width="360" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/534a49b3-d015-44b5-b0c5-279a75b5af64">
+<img width="320" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/819f6a63-bcad-4bb8-80e3-45d8400e964d">
+<img width="320" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/5684d0f6-a3ea-40b4-af1b-40d60ec1fe18">
+<img width="320" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/ce1a8a7a-a501-4bb5-92e8-d6d2ee56c8be">
 
 ## Failed Transaction ❌
 
