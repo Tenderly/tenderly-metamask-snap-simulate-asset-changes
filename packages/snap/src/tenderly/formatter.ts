@@ -123,20 +123,31 @@ function formatAssetChanges(data: any): Component[] {
 
   assetChanges.forEach((assetChange: any) => {
     if (assetChange.token_info.standard === 'ERC20') {
-      erc20Outputs.push(text(`**${assetChange.token_info.name}**`));
-      erc20Outputs.push(text(`Change Type: ${assetChange.type}`));
       erc20Outputs.push(
         text(
-          `Amount: ${assetChange.amount} **($${Number(
-            assetChange.dollar_value,
-          ).toFixed(2)})**`,
+          `**${
+            assetChange.token_info.name
+          } (${assetChange.token_info.symbol?.toUpperCase()})**`,
         ),
       );
+      erc20Outputs.push(text(`Change Type: ${assetChange.type}`));
+      erc20Outputs.push(
+        text(`Price: $${Number(assetChange.dollar_value).toFixed(4)}`),
+      );
+      erc20Outputs.push(text(`Amount: ${assetChange.amount}`));
       erc20Outputs.push(divider());
     } else if (assetChange.token_info.standard === 'ERC721') {
-      // Don't show dollar value since it's not supported (always $0)
-      erc721Outputs.push(text(`**${assetChange.token_info.name}**`));
+      erc721Outputs.push(
+        text(
+          `**${
+            assetChange.token_info.name
+          } (${assetChange.token_info.symbol?.toUpperCase()})**`,
+        ),
+      );
       erc721Outputs.push(text(`Change Type: ${assetChange.type}`));
+      erc721Outputs.push(
+        text(`Floor Price: $${Number(assetChange.dollar_value).toFixed(4)}`),
+      );
       erc721Outputs.push(text(`Amount: ${assetChange.amount}`));
       erc721Outputs.push(divider());
     } else {
@@ -144,7 +155,7 @@ function formatAssetChanges(data: any): Component[] {
         text(
           `**${assetChange.token_info.name}** ($${Number(
             assetChange.token_info.dollar_value,
-          ).toFixed(2)})`,
+          ).toFixed(4)})`,
         ),
       );
       otherOutputs.push(text(`Change Type: ${assetChange.type}`));
@@ -152,7 +163,7 @@ function formatAssetChanges(data: any): Component[] {
         text(
           `Amount: ${assetChange.amount} **($${Number(
             assetChange.dollar_value,
-          ).toFixed(2)})**`,
+          ).toFixed(4)})**`,
         ),
       );
       otherOutputs.push(divider());
