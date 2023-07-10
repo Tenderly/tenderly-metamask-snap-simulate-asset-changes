@@ -137,9 +137,9 @@ In this section, we provide examples of how the Tenderly MetaMask snap works wit
 
 The images below show a successful ERC20 token transfer of 1 USDC to `demo.eth`. The first image shows the asset changes, while the second image provides a detailed breakdown of the transaction.
 
-<img width="310" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/cb6f2a09-c6fc-4346-8f0c-12639c8d26f2">
-<img width="310" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/c358a9bc-0d76-45a1-b02c-919606a09282">
-<img width="310" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/792910da-5190-4cd7-a72e-7a0029c773a4">
+<img width="270" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/cb6f2a09-c6fc-4346-8f0c-12639c8d26f2">
+<img width="270" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/c358a9bc-0d76-45a1-b02c-919606a09282">
+<img width="270" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/792910da-5190-4cd7-a72e-7a0029c773a4">
 <br/>
 <img width="1396" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/476243ce-19b1-43f6-93d2-1b5608c852fd">
 
@@ -147,9 +147,9 @@ The images below show a successful ERC20 token transfer of 1 USDC to `demo.eth`.
 
 The images below show a successful ERC721 (NFT) token transfer of 1 Crypto Bull to other address. The first image shows the asset changes, while the second image provides a detailed breakdown of the transaction.
 
-<img width="310" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/819f6a63-bcad-4bb8-80e3-45d8400e964d">
-<img width="310" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/5684d0f6-a3ea-40b4-af1b-40d60ec1fe18">
-<img width="310" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/ce1a8a7a-a501-4bb5-92e8-d6d2ee56c8be">
+<img width="270" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/819f6a63-bcad-4bb8-80e3-45d8400e964d">
+<img width="270" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/5684d0f6-a3ea-40b4-af1b-40d60ec1fe18">
+<img width="270" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/ce1a8a7a-a501-4bb5-92e8-d6d2ee56c8be">
 <br/>
 <img width="1392" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/218a3eb0-f5c2-4a5a-89e7-89331a18e04e">
 
