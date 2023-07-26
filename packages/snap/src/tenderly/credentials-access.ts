@@ -2,15 +2,15 @@ import { panel, text, heading } from '@metamask/snaps-ui';
 import { requestSnapPrompt } from './utils';
 
 export type TenderlyCredentials = {
+  accountId: string;
   projectId: string;
-  userId: string;
-  accessKey: string;
+  accessToken: string;
 };
 
 /**
  * Fetches the credentials associated with Tenderly project.
  *
- * @param origin - The origin of the request
+ * @param origin - The origin of the request.
  */
 export async function fetchCredentials(
   origin: string,
@@ -33,7 +33,7 @@ export async function fetchCredentials(
 /**
  * Updates the credentials associated with Tenderly project.
  *
- * @param origin - The origin of the request
+ * @param origin - The origin of the request.
  */
 export async function handleUpdateTenderlyCredentials(origin: string) {
   const tenderlyAccess = await requestNewTenderlyCredentials(origin);
@@ -50,7 +50,7 @@ export async function handleUpdateTenderlyCredentials(origin: string) {
 /**
  * Requests the new Tenderly credentials.
  *
- * @param origin - The origin of the request
+ * @param origin - The origin of the request.
  */
 async function requestNewTenderlyCredentials(
   origin: string,
@@ -61,31 +61,31 @@ async function requestNewTenderlyCredentials(
     throw new Error('Request for new Tenderly access failed; missing input');
   }
 
-  const [userId, projectId, accessKey] = credentialsRaw.split('@');
+  const [accountId, projectId, accessToken] = credentialsRaw.split('@');
 
-  if (!userId || !projectId || !accessKey) {
+  if (!accountId || !projectId || !accessToken) {
     throw new Error('Request for new Tenderly access failed; invalid input');
   }
 
   return {
-    userId,
+    accountId,
     projectId,
-    accessKey,
+    accessToken,
   };
 }
 
 /**
  * Requests the Tenderly credentials.
  *
- * @param origin - The origin of the request
+ * @param origin - The origin of the request.
  */
 async function requestCredentials(origin: string): Promise<string | null> {
   return requestSnapPrompt(
     panel([
       heading(`${origin} wants to add credentials from Tenderly`),
       text('Enter your Tenderly credentials in format:'),
-      text('**{user_id}@{project_id}@{access_key}**'),
+      text('**{account_id}@{project_id}@{access_token}**'),
     ]),
-    'userId@projectId@accessKey',
+    'accountId@projectId@accessToken',
   );
 }

@@ -79,7 +79,7 @@ const SuccessButton = styled.button`
 
   &:hover {
     color: #ffffff;
-    background-color: #8bc34a;
+    background-color: #62b966;
   }
 
   ${({ theme }) => theme.mediaQueries.small} {
@@ -155,7 +155,7 @@ export const SendFailedTxButton = (props: ComponentProps<typeof Button>) => {
 export const UpdateTenderlyAccessKeyButton = (
   props: ComponentProps<typeof Button>,
 ) => {
-  return <Button {...props}>Add Access Key</Button>;
+  return <Button {...props}>Add Access Token</Button>;
 };
 
 export const GoToDocsButton = () => {

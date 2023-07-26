@@ -5,7 +5,6 @@ import {
   updateTenderlyAccessKey,
   sendTransaction,
   sendTenderlyTransaction,
-  // sendSuccessfulTransaction,
   sendFailedTransaction,
 } from '../utils';
 import {
@@ -110,10 +109,18 @@ const ErrorMessage = styled.div`
   }
 `;
 
+const PreContainer = styled.pre`
+  padding: 1rem;
+  background-color: ${({ theme }) => theme.colors.background.alternative};
+  border-radius: 4px;
+  word-break: break-all;
+  white-space: pre-wrap;
+`;
+
 const Index = () => {
   const [state, dispatch] = useContext(MetaMaskContext);
 
-  const successfulTx = {
+  const successfulTxPayload = {
     to: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
     value: '0x0',
     data: '0xa9059cbb000000000000000000000000fc43f5f9dd45258b3aff31bdbe6561d97e8b71de00000000000000000000000000000000000000000000000000000000004c4b40',
@@ -176,7 +183,7 @@ const Index = () => {
           content={{
             title: 'Add Tenderly Credentials',
             description:
-              'Add Tenderly User ID, Project ID and Access Key. Required to interact with Tenderly API.',
+              'Add Tenderly Account ID, Project ID and Access Token. Required to interact with Tenderly API.',
             data: (
               <div
                 style={{
@@ -205,7 +212,7 @@ const Index = () => {
             content={{
               title: 'Send Successful Transaction',
               description:
-                "Send a successful transaction with a predefined payload. It will be simulated using Tenderly Simulation API. Don't confirm it!",
+                'Send a successful transaction with a predefined payload. It will be simulated using Tenderly Simulation API. Do not confirm it!',
               data: (
                 <div
                   style={{
@@ -255,7 +262,7 @@ const Index = () => {
             content={{
               title: 'Send Failed Transaction',
               description:
-                "Send a failed transaction with a predefined payload. It will be simulated using Tenderly Simulation API. Don't confirm it!",
+                'Send a failed transaction with a predefined payload. It will be simulated using Tenderly Simulation API. Do not confirm it!',
               data: (
                 <div
                   style={{
@@ -287,7 +294,7 @@ const Index = () => {
           content={{
             title: 'Send Any Transaction',
             description:
-              "Send a transaction with a custom payload. It will be simulated using Tenderly Simulation API. Don't confirm it!",
+              'Send a transaction with a custom payload. It will be simulated using Tenderly Simulation API. Do not confirm it!',
             data: (
               <div>
                 <div>
@@ -295,17 +302,9 @@ const Index = () => {
                   <strong>5 USDC</strong> to demo.eth. Copy it and click on the{' '}
                   <strong>Send Transaction</strong> button.
                 </div>
-                <pre
-                  style={{
-                    padding: '1rem',
-                    backgroundColor: '#e7e7e7',
-                    borderRadius: '4px',
-                    wordBreak: 'break-word',
-                    whiteSpace: 'pre-wrap',
-                  }}
-                >
-                  {JSON.stringify(successfulTx, null, 2)}
-                </pre>
+                <PreContainer>
+                  {JSON.stringify(successfulTxPayload, null, 2)}
+                </PreContainer>
                 <SendTxButton
                   onClick={handleSendTxClick}
                   disabled={!state.installedSnap}

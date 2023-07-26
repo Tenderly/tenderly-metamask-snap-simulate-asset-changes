@@ -7,7 +7,7 @@ import { hex2int, requestSnapPrompt } from './utils';
 /**
  * Updates the credentials associated with Tenderly project.
  *
- * @param origin - The origin of the request
+ * @param origin - The origin of the request.
  */
 export async function handleSendTenderlyTransaction(origin: string) {
   return requestSnapPrompt(
@@ -20,8 +20,13 @@ export async function handleSendTenderlyTransaction(origin: string) {
 }
 
 /**
+ * This is the main function that handles the simulation of a transaction.
+ * It fetches the credentials required for the Tenderly simulation, submits the transaction data to the Tenderly API,
+ * handles any errors returned by the API, and if there are no errors,
+ * formats the response received from the Tenderly API for output.
  *
- * @param transactionOrigin
+ * @param transaction - The transaction to simulate.
+ * @param transactionOrigin - The origin of the transaction.
  */
 export async function simulate(
   transaction: { [key: string]: Json },
@@ -30,7 +35,7 @@ export async function simulate(
   const credentials = await fetchCredentials(transactionOrigin);
 
   if (!credentials) {
-    return panel([text('🚨 Tenderly access key updated. Please try again.')]);
+    return panel([text('🚨 Tenderly access token updated. Please try again.')]);
   }
 
   const simulationResponse = await submitSimulation(transaction, credentials);
@@ -40,8 +45,12 @@ export async function simulate(
 }
 
 /**
+ * This function sends a request to the Tenderly API to simulate a transaction.
+ * It prepares the transaction data, sends it to the API, and if the simulation is successful,
+ * it makes the simulation publicly accessible.
  *
- * @param credentials
+ * @param transaction - The transaction to simulate.
+ * @param credentials - Tenderly credentials object.
  */
 async function submitSimulation(
   transaction: { [key: string]: Json },
@@ -49,7 +58,7 @@ async function submitSimulation(
 ) {
   const chainId = await ethereum.request({ method: 'eth_chainId' });
   const response = await fetch(
-    `https://api.tenderly.co/api/v1/account/${credentials.userId}/project/${credentials.projectId}/simulate`,
+    `https://api.tenderly.co/api/v1/account/${credentials.accountId}/project/${credentials.projectId}/simulate`,
     {
       method: 'POST',
       body: JSON.stringify({
@@ -68,7 +77,7 @@ async function submitSimulation(
       }),
       headers: {
         'Content-Type': 'application/json',
-        'X-Access-Key': credentials.accessKey,
+        'X-Access-Key': credentials.accessToken,
       },
     },
   );
@@ -78,12 +87,12 @@ async function submitSimulation(
   // Make the simulation publicly accessible
   if (parsedResponse?.simulation?.id) {
     await fetch(
-      `https://api.tenderly.co/api/v1/account/${credentials.userId}/project/${credentials.projectId}/simulations/${parsedResponse.simulation.id}/share`,
+      `https://api.tenderly.co/api/v1/account/${credentials.accountId}/project/${credentials.projectId}/simulations/${parsedResponse.simulation.id}/share`,
       {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'X-Access-Key': credentials.accessKey,
+          'X-Access-Key': credentials.accessToken,
         },
       },
     );
@@ -93,9 +102,13 @@ async function submitSimulation(
 }
 
 /**
+ * This function handles any errors that might occur during the simulation of the transaction.
+ * It checks if a transaction or error message is included in the data returned from the simulation,
+ * and if an error is found, it creates a formatted error response.
  *
- * @param data
- * @param credentials
+ * @param data - Simulation API response.
+ * @param credentials - Tenderly credentials object.
+ * @returns Panel - MetaMask Snap panel.
  */
 function catchError(data: any, credentials: TenderlyCredentials): Panel | null {
   if (!data.transaction) {

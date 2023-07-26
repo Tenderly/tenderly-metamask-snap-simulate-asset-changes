@@ -9,6 +9,7 @@ import {
   handleSendTenderlyTransaction,
   simulate,
 } from './tenderly';
+import { CustomRequestMethod } from './constants';
 
 /**
  * Handle incoming JSON-RPC requests, sent through `wallet_invokeSnap`.
@@ -22,15 +23,25 @@ import {
  */
 export const onRpcRequest: OnRpcRequestHandler = ({ origin, request }) => {
   switch (request.method) {
-    case 'update_tenderly_credentials':
+    case CustomRequestMethod.UPDATE_TENDERLY_CREDENTIALS:
       return handleUpdateTenderlyCredentials(origin);
-    case 'send_tenderly_transaction':
+    case CustomRequestMethod.SEND_TENDERLY_TRANSACTION:
       return handleSendTenderlyTransaction(origin);
     default:
       throw new Error(`Method ${request.method} not supported.`);
   }
 };
 
+/**
+ * Handles transactions by providing insights before a transaction is signed.
+ * This function is a required export for a snap that wishes to interact with MetaMask transactions.
+ * Whenever there's a contract interaction and a transaction is submitted through MetaMask, this method is invoked.
+ * The raw unsigned transaction payload is passed as an argument to this handler method.
+ *
+ * @param args - The request handler args as object.
+ * @param args.transaction - The transaction to handle.
+ * @param args.transactionOrigin -  The transaction origin.
+ */
 export const onTransaction: OnTransactionHandler = async ({
   transaction,
   transactionOrigin,
@@ -44,7 +55,10 @@ export const onTransaction: OnTransactionHandler = async ({
     };
   }
 
-  const simulationResponse = await simulate(transaction, transactionOrigin);
+  const simulationResponse = await simulate(
+    transaction,
+    transactionOrigin || '',
+  );
 
   return {
     content: {

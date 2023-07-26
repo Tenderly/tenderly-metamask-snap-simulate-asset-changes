@@ -10,9 +10,13 @@ import { arrMakeUnique, makeAddressFormatters } from './utils';
 import { TenderlyCredentials } from './credentials-access';
 
 /**
+ * This function receives the raw data and credentials of a Tenderly project simulation,
+ * calls the individual formatter functions for each relevant section
+ * (like balance changes, output value, asset changes, etc.) and returns a panel with all the formatted outputs.
  *
- * @param data
- * @param credentials
+ * @param data - Simulation API data.
+ * @param credentials - Tenderly credentials object.
+ * @returns Panel with formatted values.
  */
 export function formatResponse(
   data: any,
@@ -40,10 +44,13 @@ export function formatResponse(
 }
 
 /**
+ * This function generates a panel showing balance changes for each account involved in the transaction.
+ * If there are no balance changes, it simply informs the user.
  *
- * @param data
- * @param options0
- * @param options0.formatAddress
+ * @param data - Simulation API data.
+ * @param formatters - Formatters value from makeAddressFormatters().
+ * @param formatters.formatAddress - Function that formats an address.
+ * @returns Panel outputs with balance diff.
  */
 function formatBalanceDiff(data: any, { formatAddress }: any): Component[] {
   const panelOutputs: Component[] = [heading('Balance changes:')];
@@ -69,10 +76,13 @@ function formatBalanceDiff(data: any, { formatAddress }: any): Component[] {
 }
 
 /**
+ * This function creates a panel that presents the output values of the transaction, if any exist.
+ * It also decodes the output, if possible.
  *
- * @param data
- * @param options0
- * @param options0.formatAddressesWithinStr
+ * @param data - Simulation API data.
+ * @param formatters - Formatters value from makeAddressFormatters().
+ * @param formatters.formatAddressesWithinStr - Function that formats an address within a string.
+ * @returns Panel outputs with decoded values.
  */
 function formatOutputValue(
   data: any,
@@ -105,8 +115,11 @@ function formatOutputValue(
 }
 
 /**
+ * This function formats a panel to show any changes to assets, differentiating between ERC20, ERC721, and other changes.
+ * If there are no changes, it informs the user.
  *
- * @param data
+ * @param data - Simulation API data.
+ * @returns Panel outputs with asset changes.
  */
 function formatAssetChanges(data: any): Component[] {
   const panelOutputs: Component[] = [heading('Asset Changes:')];
@@ -179,9 +192,12 @@ function formatAssetChanges(data: any): Component[] {
 }
 
 /**
+ * This function creates a panel that lists any changes to storage that occurred during the transaction.
+ * It uniquely formats addresses and nested data structures for clarity.
  *
- * @param data
- * @param formatters
+ * @param data - Simulation API data.
+ * @param formatters - Formatters value from makeAddressFormatters().
+ * @returns Panel outputs with storage changes.
  */
 function formatStorageChanges(data: any, formatters: any): Component[] {
   const { formatAddress, formatAddressesWithinStr } = formatters;
@@ -201,7 +217,6 @@ function formatStorageChanges(data: any, formatters: any): Component[] {
     const storageChanges = stateDiff.filter((d: any) => d.address === contract);
 
     storageChanges.forEach((diff: any) => {
-      // todo: support raw format here!
       if (diff.soltype) {
         panelOutputs.push(
           text(`▸ **${diff.soltype.name}[${diff.soltype.type}]:**`),
@@ -223,9 +238,12 @@ function formatStorageChanges(data: any, formatters: any): Component[] {
 }
 
 /**
+ * This function presents the event logs, if they exist, for each transaction.
+ * The logs are formatted for readability and include input values.
  *
- * @param data
- * @param formatters
+ * @param data - Simulation API data.
+ * @param formatters - Formatters value from makeAddressFormatters().
+ * @returns Panel outputs with event logs.
  */
 function formatEventLogs(data: any, formatters: any): Component[] {
   const { formatAddress, formatAddressesWithinStr } = formatters;
@@ -264,14 +282,18 @@ function formatEventLogs(data: any, formatters: any): Component[] {
 }
 
 /**
+ * This function produces a formatted visual hierarchy of call traces, showing nested calls recursively.
  *
- * @param data
+ * @param data - Simulation API data.
+ * @returns Panel outputs with call trace.
  */
 function formatCallTrace(data: any): Component[] {
   /**
+   * ShowS nested calls recursively.
    *
-   * @param calls
-   * @param iter
+   * @param calls - Trace calls.
+   * @param iter - Indentation.
+   * @returns Call trace lines.
    */
   function formatCallsRecursive(calls: any, iter = 0): Component[] {
     let lines: Component[] = [];
@@ -300,15 +322,17 @@ function formatCallTrace(data: any): Component[] {
 }
 
 /**
+ * This function returns a link to the full details of the simulation on the Tenderly Dashboard, and a separate shareable link.
  *
- * @param data
- * @param credentials
+ * @param data - Simulation API data.
+ * @param credentials - Tenderly credentials object.
+ * @returns Panel with simulation outputs.
  */
 export function formatSimulationUrl(
   data: any,
   credentials: TenderlyCredentials,
 ): Component[] {
-  const simulationUrl = `https://dashboard.tenderly.co/${credentials.userId}/${credentials.projectId}/simulator/${data.simulation?.id}`;
+  const simulationUrl = `https://dashboard.tenderly.co/${credentials.accountId}/${credentials.projectId}/simulator/${data.simulation?.id}`;
   const sharedSimulationUrl = `https://dashboard.tenderly.co/shared/simulation/${data.simulation?.id}`;
 
   return [

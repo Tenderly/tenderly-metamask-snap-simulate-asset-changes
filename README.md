@@ -81,9 +81,9 @@ The next step is to install the MetaMask Flask development plugin. This is a spe
 
 To use the Tenderly MetaMask snap, you'll need a Tenderly account. If you don't have one already, visit the [Tenderly website](https://dashboard.tenderly.co/register) and create a new account.
 
-### Create an Access Key
+### Create an Access Token
 
-Once you've logged into your Tenderly account, you will need to create an `access-key`. This is a unique identifier that allows the Tenderly MetaMask snap to interact with your Tenderly account. You can generate it on the following link https://dashboard.tenderly.co/account/authorization.
+Once you've logged into your Tenderly account, you will need to create an `access token`. This is a unique identifier that allows the Tenderly MetaMask snap to interact with your Tenderly account. You can generate it on the following link https://dashboard.tenderly.co/account/authorization.
 
 <img width="577" alt="image" src="https://github.com/Tenderly/tenderly-metamask-snap-simulate-asset-changes/assets/26412515/0abb39b3-dd2b-4af6-98c4-73c00f4f70f0">
 
@@ -123,7 +123,7 @@ With the app running, you can now install the Tenderly MetaMask snap. To do this
 
 ### Add Tenderly Credentials
 
-Finally, you'll need to add your Tenderly credentials to the snap. Click on **Add access key** button within the app. You'll need to enter your credentials in the following format: `{user_id}@{project_id}@{access_key}`.
+Finally, you'll need to add your Tenderly credentials to the snap. Click on **Add access token** button within the app. You'll need to enter your credentials in the following format: `{account_id}@{project_id}@{access_token}`.
 
 That's it! You've successfully set up the Tenderly MetaMask snap. If you encounter any issues during the setup process, don't hesitate to reach out to our support team at support@tenderly.co. We're here to help! 💜
 

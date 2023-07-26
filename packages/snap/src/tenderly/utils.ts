@@ -2,8 +2,10 @@ import { Panel } from '@metamask/snaps-ui';
 import { Json } from '@metamask/utils';
 
 /**
+ * Converts hex value to integer.
  *
- * @param hex
+ * @param hex - Hex value.
+ * @returns Integer value.
  */
 export function hex2int(hex: string | Json): number | null {
   return hex ? parseInt(hex.toString(), 16) : null;
@@ -16,7 +18,7 @@ export function hex2int(hex: string | Json): number | null {
  * @param r
  */
 export function strReplaceAll(o: string, s: string, r: string): string {
-  return o.replace(new RegExp(s, 'g'), r);
+  return o.replace(new RegExp(s, 'gu'), r);
 }
 
 /**
