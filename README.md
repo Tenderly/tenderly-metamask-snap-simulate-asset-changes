@@ -57,6 +57,7 @@ Access to shared resources can be enabled and revoked at any time via the Dashbo
 
 More info about asset changes can be found on our official docs:
 
+- **How to Add Transaction Preview to a MetaMask Snap Using Tenderly Simulation API** - https://docs.tenderly.co/simulations-and-forks/integration-guides/how-to-add-transaction-preview-to-a-metamask-snap-using-tenderly-simulation-api
 - **Simulation API** - https://docs.tenderly.co/simulations-and-forks/simulation-api
 - **Asset Changes** - https://docs.tenderly.co/simulations-and-forks/asset-changes
 - **Public Sharing of Transactions, DevNets, Forks, and Simulations** - https://blog.tenderly.co/changelog/public-sharing-of-transactions-devnets-forks-and-simulations
