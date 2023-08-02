@@ -1,5 +1,6 @@
 import {
   Component,
+  copyable,
   divider,
   heading,
   panel,
@@ -25,9 +26,9 @@ export function formatResponse(
   const formatters = makeAddressFormatters(data);
 
   const panelOutputs = [
-    ...formatSimulationUrl(data, credentials),
-    divider(),
     ...formatAssetChanges(data),
+    divider(),
+    ...formatSimulationUrl(data, credentials),
     divider(),
     ...formatBalanceDiff(data, formatters),
     divider(),
@@ -341,8 +342,8 @@ export function formatSimulationUrl(
     text(
       `**Status:** ${data.transaction?.status ? 'Success ✅' : 'Failed ❌'}`,
     ),
-    text(`**${simulationUrl}**`),
+    copyable(`${simulationUrl}`),
     text('Share simulation details with others! 🤗'),
-    text(`**${sharedSimulationUrl}**`),
+    copyable(`${sharedSimulationUrl}`),
   ];
 }

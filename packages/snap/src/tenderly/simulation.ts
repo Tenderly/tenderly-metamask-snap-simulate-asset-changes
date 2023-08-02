@@ -73,7 +73,7 @@ async function submitSimulation(
         save_if_fails: true,
         simulation_type: 'full',
         generate_access_list: false,
-        source: 'metamask-snap',
+        source: 'tenderly-metamask-snap',
       }),
       headers: {
         'Content-Type': 'application/json',
